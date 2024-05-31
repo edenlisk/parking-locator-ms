@@ -1,0 +1,24 @@
+type Query {
+    parkings(range: Int): [ParkingCompany]
+    parking(id: Int): ParkingCompany!
+}
+
+
+type ParkingCompany {
+    coordinates: ParkingCoordinates,
+    totalLots: Int,
+    availableLots: Int,
+    province: String,
+    district: String,
+    sector: String
+}
+
+
+type Reservation {
+    arrivalTime: String,
+}
+
+type ParkingCoordinates {
+    lat: String,
+    lng: String
+}
